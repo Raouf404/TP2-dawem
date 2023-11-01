@@ -1,0 +1,112 @@
+/* Start generales */
+* {
+  box-sizing: border-box;
+  --bg-height: 361px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Start generales */
+/* Start header */
+header {
+  position: relative;
+  height: 80px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--bg-height);
+}
+header::after {
+  content: "";
+  position: absolute;
+  height: 361px;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  background-image: url("images/bg.png");
+  background-size: cover;
+}
+header h1 {
+  margin: 0;
+  width: 132px;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  color: transparent;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: auto 0;
+  list-style: none;
+  text-decoration: none;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #666;
+}
+/* End header */
+/* Start main */
+main {
+  width: 60%;
+  float: left;
+  padding: 30px;
+}
+main .article h2 {
+  font-weight: 800;
+}
+main .article .date {
+  color: #666;
+}
+main .article :last-of-type(p) {
+  line-height: 1.8;
+}
+/* End main */
+/* Start aside */
+aside {
+  width: 40%;
+  float: right;
+  padding: 30px 50px;
+  position: relative;
+}
+aside::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #BBB;
+  top: 0;
+  left: 0;
+}
+aside ul {
+  list-style: none;
+  line-height: 1.8;
+}
+/* End aside */
+/* Start footer */
+footer {
+  clear: both;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #BBB;
+  top: 0;
+  left: 0;
+}
+footer p {
+  margin: 0 auto;
+}
+/* End footer */
