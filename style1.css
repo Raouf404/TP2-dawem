@@ -3,6 +3,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --background-image-height: 361px;
+  --all-padding: 20px;
 }
 body {
   font-family: Arial, sans-serif;
@@ -12,14 +14,24 @@ body {
 header {
   background-color: #fff;
   color: #000;
-  border-bottom: #999 1px solid;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: var(--background-image-height);
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: var(--background-image-height);
+  width: 100%;
+  background-image: url(images/bg.png);
+  background-size: cover;
 }
 header .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
+  padding: var(--all-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,18 +60,19 @@ header ul li a:hover {
 }
 /* End Header */
 /* Start Content */
-  .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 /* Start Content */
 /* Start Main */
 main {
   width: 60%;
-  padding: 15px;
+  padding: var(--all-padding);
+  padding-top: 50px;
   border-right: 1px #999 solid;
 }
 main h2 {
@@ -76,7 +89,8 @@ main p {
 /* Start Aside */
 aside {
   width: 40%;
-  padding: 15px;
+  padding: var(--all-padding);
+  padding-top: 50px;
 }
 aside h2 {
   margin-bottom: 10px;
@@ -91,3 +105,11 @@ aside img {
   margin: 0 auto;
 }
 /* End Aside */
+/* Start Footer */
+footer {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px #999 solid;
+}
+/* End Footer */
